@@ -1,5 +1,6 @@
 <script>
   import Router from 'svelte-spa-router'
+  import Main from "./routes/Main.svelte" 
   import Home from "./routes/Home.svelte"
   import Detail from "./routes/Detail.svelte"
   import QuestionCreate from "./routes/QuestionCreate.svelte"
@@ -8,16 +9,19 @@
   import UserLogin from "./routes/UserLogin.svelte"
   import QuestionModify from "./routes/QuestionModify.svelte"
   import AnswerModify from "./routes/AnswerModify.svelte"
+  import Keyboard from './routes/Keyboard.svelte'
 
 
   const routes = {
-    '/': Home,
+    '/': Main,
+    '/board' : Home,
     '/detail/:question_id': Detail,
     '/question-create': QuestionCreate,
     '/user-create' : UserCreate,
     '/user-login' : UserLogin,
     '/question-modify/:question_id': QuestionModify,
-    '/answer-modify/:answer_id' : AnswerModify
+    '/answer-modify/:answer_id' : AnswerModify,
+    '/keyboard': Keyboard
   }
 </script>
 
